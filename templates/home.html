@@ -1,0 +1,12 @@
+<div>
+    {% for dest in dests %}
+<h1>
+    hello{{ dest.blog_tittle }}
+
+
+
+
+</h1>
+{{dest.blog_content |safe}}
+{% endfor %}
+</div>

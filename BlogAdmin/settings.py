@@ -31,7 +31,11 @@ DEBUG = True
 
 
 # Application definition
-
+REST_FRAMEWORK = {
+    'DEFAULT_RENDERER_CLASSES': (
+        'rest_framework.renderers.JSONRenderer',
+    )
+}
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -89,15 +93,15 @@ WSGI_APPLICATION = 'BlogAdmin.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'blog',
+        'NAME': 'blogpost', #database name
 
-        'USER': 'postgres',
+        'USER': 'postgres',  #postgres user name
 
-        'PASSWORD': 'admin',
+        'PASSWORD': 'admin', #postgres password
 
-        'HOST': '127.0.0.1',
+        'HOST': '127.0.0.1', #host name
 
-        'PORT': '5432'
+        'PORT': '5432' #port number
     }
 }
 

@@ -21,9 +21,31 @@ pip install requests
 
 pip install pillow
 
-# after installation make migration
+#BlogAdmin folder setting.py file need to edit the databes
+DATABASES = {
+    'default': {
+       
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        
+        'NAME': 'blog', #database name
+
+        'USER': 'postgres',  #postgres user name
+
+        'PASSWORD': 'admin', #postgres password
+
+        'HOST': '127.0.0.1', #host name
+
+        'PORT': '5432' #port number
+    }
+}
+
+
+# after installation and connecting database make migration
 ./manage.py makemigrations
 ./manage.py migrate
+#ceate a superuser
+#this user will have all the permission of sinbad admib panel
+./manage.py createsuperuser
 
 # run the project Port address
 ./manage.py runserver Portaddress
@@ -33,5 +55,5 @@ Example: ./manage.py runserver 8000
 
 
 
-#the api address Http//address/api/blogs/
-Exaple:http://127.0.0.1:8000/api/blogs/
+#the api address Http//hostadress:port/api/blogs/
+Example:http://127.0.0.1:8000/api/blogs/

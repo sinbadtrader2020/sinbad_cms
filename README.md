@@ -7,19 +7,8 @@ virtualenv venv
 
 #inside the venv install the packages
 #install packages
-pip install docutils
 
-pip install djangorestframework
-
-pip install django-ckeditor
-
-pip install django-cors-headers
-
-pip install psycopg2-binary
-
-pip install requests 
-
-pip install pillow
+pip3 install -r requirements.txt
 
 #BlogAdmin folder setting.py file need to edit the databes
 DATABASES = {

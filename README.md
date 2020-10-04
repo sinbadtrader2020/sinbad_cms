@@ -1,3 +1,7 @@
+
+#please make copy or keep a backup of admin/media file for previous deployment
+#and paste it after pulling from develop branch and then deploy
+
 #go to the project directory ../Blogadmin And install the venv
 sudo apt-get install python3
 sudo apt-get install -y python3-pip
@@ -36,6 +40,12 @@ DATABASES = {
 #this user will have all the permission of sinbad admib panel
 ./manage.py createsuperuser
 
+#inside admin folder check if static/images/sinbad-logo1.png is there
+#If not the create the folder inside static
+#you will find the logo in sinbad-logo1.png in base directory of the project 
+   images/sinbad-logo1.png
+
+
 # run the project Port address
 ./manage.py runserver Portaddress
 Example: ./manage.py runserver 8000
@@ -46,3 +56,5 @@ Example: ./manage.py runserver 8000
 
 #the api address Http//hostadress:port/api/blogs/
 Example:http://127.0.0.1:8000/api/blogs/
+
+

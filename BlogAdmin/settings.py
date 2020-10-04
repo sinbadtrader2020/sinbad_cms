@@ -47,7 +47,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'ckeditor',
     'ckeditor_uploader',
-    'corsheaders'
+    'corsheaders',
+
 
 ]
 
@@ -66,6 +67,8 @@ MIDDLEWARE = [
 ALLOWED_HOSTS=['*']
 CORS_ORIGIN_ALLOW_ALL = True
 ROOT_URLCONF = 'BlogAdmin.urls'
+
+
 
 TEMPLATES = [
     {

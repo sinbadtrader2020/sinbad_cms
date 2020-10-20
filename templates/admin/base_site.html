@@ -2,6 +2,17 @@
 {% extends 'admin/base.html' %}
 {% load static %}
 
-{% block branding %}
-<img style="width: 155px;height: 25px" src="{% static 'images/sinbad-logo1.png' %}" alt="Logo" />
+
+{% block extraheader %}
+    <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" />
 {% endblock %}
+{% block branding %}
+    <div style="overflow: hidden">
+        <img style="width: 25px;height: 25px;float: left" src="{% static 'images/sinbad-logo.png' %}" alt="Logo" />
+        <p style='color: #0f0f0f; float: left; padding-right: 4px; margin: 0px; font-size: 21px;font-weight: normal' >Sinbad </p>
+
+        <p style='color: #BF0A30; float: left ;font-size: 21px;font-weight: normal ;margin: 0px;'   >Finance</p>
+    </div>
+{% endblock %}
+
+
